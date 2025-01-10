@@ -11,7 +11,7 @@ if [ ! -d .git ]; then
   exit 1
 fi
 
-# Create or modify the file to trigger a change
+# Create, modify the file to trigger a change
 if [ ! -f "$FILE_TO_CHANGE" ]; then
   echo "Trigger file created at $(date)" > "$FILE_TO_CHANGE"
 else
