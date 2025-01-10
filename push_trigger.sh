@@ -29,4 +29,3 @@ if [ $? -eq 0 ]; then
   echo "Webhook should now be triggered."
 else
   echo "Failed to push changes. Please check your Git configuration."
-fi
