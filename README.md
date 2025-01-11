@@ -21,5 +21,5 @@ This repository is designed to simulate GitHub actions (Push, Pull Request, Merg
 2. Clone the repository locally:
 
    ```bash
-   git clone https://github.com/yourusername/action-repo.git
+   git clone https://github.com/sanketmudaraddi/action-repo.git
    cd action-repo
