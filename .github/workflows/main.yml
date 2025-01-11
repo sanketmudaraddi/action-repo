@@ -7,10 +7,6 @@ on:
   pull_request:
     branches:
       - main
-  # Optional: For testing merge events as well
-  pull_request_target:
-    branches:
-      - main
 
 jobs:
   trigger-webhook:
@@ -20,6 +16,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Trigger Webhook on Push, PR, Merge
+      - name: Trigger Webhook
         run: |
-          curl -X POST http://localhost:5000/webhook -H "Content-Type: application/json" -d '{"action":"push", "sender": {"login": "username"}, "pull_request": {"head": {"ref": "branch1"}, "base": {"ref": "branch2"}}}'
+          curl -X POST https://ff2b-103-180-2-66.ngrok-free.app/webhook \
+            -H "Content-Type: application/json" \
+            -H "X-GitHub-Event: ${{ github.event_name }}" \
+            -d '${{ toJSON(github.event) }}'
