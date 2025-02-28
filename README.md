@@ -4,7 +4,7 @@ This repository is designed to simulate GitHub actions (Push, Pull Request, Merg
 
 ## Clone and Setup
 
-To get started with this repository and the webhook service- follow these steps:
+To get started with this repository and the webhook service, follow these steps:
 
 1. **Clone the Action Repository**
 
